@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsvRenta" targetNamespace="http://tempuri.org/dsvRenta.xsd" xmlns:mstns="http://tempuri.org/dsvRenta.xsd" xmlns="http://tempuri.org/dsvRenta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ControlBibliotecaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ControlBibliotecaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BibliotecaCapaNegocio.Properties.Settings.GlobalReference.Default.ControlBibliotecaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vRentaTableAdapter" GeneratorDataComponentClassName="vRentaTableAdapter" Name="vRenta" UserDataComponentName="vRentaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ControlBibliotecaConnectionString (Settings)" DbObjectName="ControlBiblioteca.dbo.vRenta" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, FechaRenta, FechaRegreso, Multa, Cantidad, idCliente, NombreCompleto FROM dbo.vRenta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="FechaRenta" DataSetColumn="FechaRenta" />
+              <Mapping SourceColumn="FechaRegreso" DataSetColumn="FechaRegreso" />
+              <Mapping SourceColumn="Multa" DataSetColumn="Multa" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="idCliente" DataSetColumn="idCliente" />
+              <Mapping SourceColumn="NombreCompleto" DataSetColumn="NombreCompleto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsvRenta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsvRenta" msprop:Generator_UserDSName="dsvRenta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vRenta" msprop:Generator_TableClassName="vRentaDataTable" msprop:Generator_TableVarName="tablevRenta" msprop:Generator_TablePropName="vRenta" msprop:Generator_RowDeletingName="vRentaRowDeleting" msprop:Generator_RowChangingName="vRentaRowChanging" msprop:Generator_RowEvHandlerName="vRentaRowChangeEventHandler" msprop:Generator_RowDeletedName="vRentaRowDeleted" msprop:Generator_UserTableName="vRenta" msprop:Generator_RowChangedName="vRentaRowChanged" msprop:Generator_RowEvArgName="vRentaRowChangeEvent" msprop:Generator_RowClassName="vRentaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="FechaRenta" msprop:Generator_ColumnVarNameInTable="columnFechaRenta" msprop:Generator_ColumnPropNameInRow="FechaRenta" msprop:Generator_ColumnPropNameInTable="FechaRentaColumn" msprop:Generator_UserColumnName="FechaRenta" type="xs:dateTime" />
+              <xs:element name="FechaRegreso" msprop:Generator_ColumnVarNameInTable="columnFechaRegreso" msprop:Generator_ColumnPropNameInRow="FechaRegreso" msprop:Generator_ColumnPropNameInTable="FechaRegresoColumn" msprop:Generator_UserColumnName="FechaRegreso" type="xs:dateTime" />
+              <xs:element name="Multa" msprop:Generator_ColumnVarNameInTable="columnMulta" msprop:Generator_ColumnPropNameInRow="Multa" msprop:Generator_ColumnPropNameInTable="MultaColumn" msprop:Generator_UserColumnName="Multa" type="xs:decimal" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" />
+              <xs:element name="idCliente" msprop:Generator_ColumnVarNameInTable="columnidCliente" msprop:Generator_ColumnPropNameInRow="idCliente" msprop:Generator_ColumnPropNameInTable="idClienteColumn" msprop:Generator_UserColumnName="idCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="NombreCompleto" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" msprop:Generator_UserColumnName="NombreCompleto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vRenta" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
